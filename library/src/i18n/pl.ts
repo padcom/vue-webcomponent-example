@@ -1,5 +1,8 @@
 /* eslint @stylistic/quote-props: ["error", "always"] */
 
 export default {
-  'example': 'Przykład',
+  'state': {
+    'empty': 'Pusty',
+    'example': 'Przykład',
+  },
 }

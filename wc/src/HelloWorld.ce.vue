@@ -3,22 +3,20 @@
 </template>
 
 <script lang="ts" setup>
-import type { App } from 'vue'
-import { createI18n } from 'vue-i18n'
-import { HelloWorld, messages, getAgentLocale } from '@test/library'
+import { watchEffect, type App, type PropType } from 'vue'
+import { HelloWorld, getAgentLocale } from '@test/library'
 
-defineProps({
+import { i18n } from './i18n'
+
+const props = defineProps({
   message: { type: String, default: 'from HelloWorld.ce.vue' },
+  lang: { type: String as PropType<'en' | 'de' | 'pl'>, default: getAgentLocale },
 })
+
+watchEffect(() => { i18n.global.locale.value = props.lang || i18n.global.locale.value })
 
 defineOptions({
   configureApp(app: App) {
-    const i18n = createI18n<false>({
-      legacy: false,
-      locale: getAgentLocale(),
-      fallbackLocale: 'en',
-      messages,
-    })
     app.use(i18n)
   },
 })
