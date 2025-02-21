@@ -1,0 +1,27 @@
+{
+  "name": "@test/app",
+  "version": "0.0.1",
+  "description": "",
+  "keywords": [],
+  "author": "Matthias Hryniszak <padcom@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "vite",
+    "clean": "rimraf dist",
+    "build": "vite build",
+    "build:watch": "vite build -w",
+    "preview": "vite build && vite preview"
+  },
+  "homepage": "https://github.com/padcom/app#readme",
+  "bugs": {
+    "url": "https://github.com/padcom/app/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/padcom/app.git"
+  },
+  "devDependencies": {
+    "@test/wc": "*"
+  }
+}

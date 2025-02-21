@@ -1,0 +1,26 @@
+{
+  "workspaces": [
+    "library",
+    "wc",
+    "app"
+  ],
+  "scripts": {
+    "build": "mrdr build -C"
+  },
+  "devDependencies": {
+    "@padcom/eslint-config-vue": "^0.20.1",
+    "@padcom/nano-css-reset": "^0.3.0",
+    "@padcom/tsconfig": "^0.0.2",
+    "@padcom/vite-config-vue-lib": "^0.10.0",
+    "@intlify/unplugin-vue-i18n": "^6.0.3",
+    "eslint": "^9.20.1",
+    "mrdr": "0.2.0",
+    "rimraf": "^6.0.1",
+    "typescript": "5.4.2",
+    "vite": "6.1.1",
+    "vite-plugin-eslint": "^1.8.1",
+    "vite-svg-loader": "^5.1.0",
+    "vue": "^3.5.13",
+    "vue-i18n": "^10.0.5"
+  }
+}

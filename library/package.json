@@ -1,0 +1,45 @@
+{
+  "name": "@test/library",
+  "version": "0.0.1",
+  "description": "",
+  "author": "Matthias Hryniszak <padcom@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "vue"
+  ],
+  "homepage": "https://github.com/padcom/library#readme",
+  "bugs": {
+    "url": "https://github.com/padcom/library/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/padcom/library.git"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/types.d.ts",
+      "style": "./dist/index.css",
+      "require": "./dist/index.umd.cjs",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "start": "vite",
+    "test": "vitest run --root . --coverage",
+    "test:watch": "vitest watch --root . --coverage",
+    "lint": "eslint './src/**/*.{ts,vue}'",
+    "dev": "vite build -w",
+    "clean": "rimraf dist",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@vueuse/core": "^12.7.0",
+    "vue": "^3.5.13",
+    "vue-i18n": "^10.0.5"
+  }
+}
