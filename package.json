@@ -5,6 +5,7 @@
     "app"
   ],
   "scripts": {
+    "start": "mrdr -w app",
     "build": "mrdr build -C"
   },
   "devDependencies": {
